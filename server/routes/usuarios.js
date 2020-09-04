@@ -3,9 +3,11 @@ const bcrypt = require('bcrypt');
 const _ = require('underscore');
 const Usuario = require('../models/usuarios');
 
+const { verificaToken } = require('../middlewares/authentication');
+
 const app = express();
 
-app.get('/usuario', function(req, res) {
+app.get('/usuario', verificaToken, (req, res) => {
     let desde = req.query.desde || 0;
     desde = Number(desde);
 

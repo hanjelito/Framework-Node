@@ -7,7 +7,7 @@ const app = express();
 const bodyParser = require('body-parser');
 
 
-//midlware
+//middleware
 app.use(bodyParser.urlencoded({ extends: false }));
 
 app.use(bodyParser.json());
