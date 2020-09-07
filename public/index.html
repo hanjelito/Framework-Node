@@ -4,24 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Google Sign-In Demo</title>
-    <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <meta name="google-signin-client_id" content="AIzaSyCt0S5iZidsmK90ppmHxNKYy0so0MqWJVQ">
+    <title>Demo</title>
+
 
 
 </head>
 
 <body>
-    <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    <script>
-        function onSignIn(googleUser) {
-            var profile = googleUser.getBasicProfile();
-            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-            console.log('Name: ' + profile.getName());
-            console.log('Image URL: ' + profile.getImageUrl());
-            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
-        }
-    </script>
+    <img src="http://localhost:3000/imagen/productos/5f54b4dc2f6968894311bf3a-419.png?token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvIjp7InJvbGUiOiJBRE1JTl9ST0xFIiwiZXN0YWRvIjp0cnVlLCJnb29nbGUiOmZhbHNlLCJfaWQiOiI1ZjUwYTA1N2FiZjgzNmE4Njk1ZTQ3MmIiLCJub21icmUiOiJ0ZXN0MSIsImVtYWlsIjoidGVzdDFAZ21haWwuY29tIiwiX192IjowLCJpbWciOiI1ZjUwYTA1N2FiZjgzNmE4Njk1ZTQ3MmItOTUyLnBuZyJ9LCJpYXQiOjE1OTk0ODI2NjYsImV4cCI6MTU5OTY1NTQ2Nn0.vCBycb2ToqhZuVlbQBNTQflEkeB7FCNZ9f-fj8k0s6o"
+        alt="">
 </body>
 
 </html>
