@@ -59,7 +59,8 @@ app.put('/upload/:tipo/:id', verificaToken, (req, res) => {
                 err
             });
         }
-        if (tipo === 'usuario')
+        console.log(tipo);
+        if (tipo === 'usuarios')
             imagenUsuario(id, res, nombreArchivo);
         else
             imagenProducto(id, res, nombreArchivo);
@@ -86,10 +87,6 @@ function imagenUsuario(id, res, nombreArchivo) {
             })
         }
 
-        // let pathImagen = path.resolve(__dirname, `../../uploads/usuarios/${usuarioDB.img}`);
-        // if (fs.existsSync(pathImagen)) {
-        //     fs.unlinkSync(pathImagen);
-        // }
         borrarArchivo(usuarioDB.img, 'usuarios');
         usuarioDB.img = nombreArchivo;
         usuarioDB.save((err, usuarioGuardado) => {
